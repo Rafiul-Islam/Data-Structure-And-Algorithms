@@ -17,7 +17,7 @@ class LinkedList:
 
     def pop(self):
         if self.top is None:
-            self.isEmpty()
+            self.is_empty()
             return
         cur = self.top.data
         self.top = self.top.next
@@ -26,7 +26,7 @@ class LinkedList:
 
     def peek(self):
         if self.top is None:
-            self.isEmpty()
+            self.is_empty()
             return
         print('Peek:', self.top.data)
 
@@ -41,13 +41,13 @@ class LinkedList:
 
     def size(self):
         if self.top is None:
-            self.empty_stack()
+            self.is_empty()
             return
         print('Stack size:', self.node_count)
 
     def print(self):
         if self.top is None:
-            self.empty_stack()
+            self.is_empty()
             return
         current = self.top
 
