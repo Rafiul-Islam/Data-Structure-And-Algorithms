@@ -47,10 +47,20 @@ class LinkedList:
             total += 1
             current_node = current_node.next
 
-        print("Length:", total)
+        # print(F"Length: {total}" if total > 0 else "Empty LinkedList")
         return total
 
+    def is_empty(self):
+        if self.length() == 0:
+            print('Empty LinkedList')
+            return
+        else:
+            print("Not empty")
+            return
+
     def show(self):
+        if self.length() == 0:
+            self.is_empty()
         current_node = self.head
         while current_node.next != None:
             current_node = current_node.next
@@ -58,6 +68,9 @@ class LinkedList:
         print()
 
     def get(self, index):
+        if self.length() == 0:
+            self.is_empty()
+
         if index > self.length():
             print('Error: Index out of bound')
             return
@@ -71,7 +84,9 @@ class LinkedList:
             else:
                 current_index += 1
 
-    def remove(self, index):
+    def remove(self, index=0):
+        if self.length() == 0:
+            self.is_empty()
         if index > self.length():
             print('Error: Index out of bound')
             return
@@ -88,17 +103,28 @@ class LinkedList:
 
 linkedList = LinkedList()
 linkedList.append(5)
-linkedList.append(2)
-linkedList.append(3)
-linkedList.append(4)
+linkedList.is_empty()
 linkedList.show()
-linkedList.length()
-linkedList.append_first(1)
+linkedList.remove()
 linkedList.show()
-linkedList.length()
-linkedList.append_nth_position(2, 6)
-linkedList.length()
-linkedList.show()
-linkedList.get(2)
-linkedList.remove(2)
-linkedList.show()
+# linkedList.remove(0)
+# linkedList.append(2)
+# linkedList.append(3)
+# linkedList.append(4)
+# linkedList.show()
+# linkedList.length()
+# linkedList.append_first(1)
+# linkedList.show()
+# linkedList.length()
+# linkedList.append_nth_position(2, 6)
+# linkedList.length()
+# linkedList.show()
+# linkedList.get(2)
+# linkedList.remove(2)
+# linkedList.show()
+# linkedList.remove(2)
+# linkedList.show()
+# linkedList.remove(2)
+# linkedList.show()
+# linkedList.remove(2)
+# linkedList.show()

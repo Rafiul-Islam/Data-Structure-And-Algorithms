@@ -12,4 +12,4 @@ class LinkeList:
         current = self.top
         while current.next != None:
             current = current.next
-        current = new_node
+        current.next = new_node
