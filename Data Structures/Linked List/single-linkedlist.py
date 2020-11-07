@@ -16,6 +16,30 @@ class LinkedList:
             current = current.next
         current.next = new_node
 
+    def append_first(self, data):
+        new_node = Node(data)
+        current_node = self.head
+        start = current_node.next
+        new_node.next = start
+        start = new_node
+        current_node.next = start
+        while current_node.next != None:
+            current_node = current_node.next
+
+    def append_nth_position(self, index, data):
+        new_node = Node(data)
+        current_node = self.head
+        current_index = 0
+        while True:
+            last_node = current_node
+            current_node = current_node.next
+            if current_index == index:
+                last_node.next = new_node
+                new_node.next = current_node
+                return
+            else:
+                current_index += 1
+
     def length(self):
         current_node = self.head
         total = 0
@@ -69,6 +93,12 @@ linkedList.append(3)
 linkedList.append(4)
 linkedList.show()
 linkedList.length()
+linkedList.append_first(1)
+linkedList.show()
+linkedList.length()
+linkedList.append_nth_position(2, 6)
+linkedList.length()
+linkedList.show()
 linkedList.get(2)
 linkedList.remove(2)
 linkedList.show()
