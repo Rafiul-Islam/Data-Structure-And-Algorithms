@@ -1,15 +1,58 @@
 class Node:
-    def __init__(self, data=None):
+    def __init__(self, data):
         self.data = data
         self.next = None
 
-class LinkeList:
-    def __init__(self):
-        self.top = Node()
 
-    def Enqueue(self, data):
-        new_node = Node(data)
-        current = self.top
-        while current.next != None:
-            current = current.next
-        current.next = new_node
+class Queue:
+    def __init__(self):
+        self.front = None
+        self.rear = None
+
+    def enqueue(self, data):
+        entry = Node(data)
+        if self.front is None and self.rear is None:
+            self.front = entry
+            self.rear = entry
+            return
+        self.rear.next = entry
+        self.rear = entry
+
+    def dequeue(self):
+        if self.front is None: return
+        if self.front is self.rear:
+            self.front = None
+            self.rear = None
+        else:
+            self.front = self.front.next
+
+    def isEmpty(self):
+        if self.front is None:
+            print("Empty Queue")
+            return True
+        return False
+
+    def qFront(self):
+        if not self.isEmpty():
+            return self.rear.data
+
+    def qPrint(self):
+        while self.front is not None:
+            print(self.front.data, end=" ")
+            self.front = self.front.next
+
+
+queue = Queue()
+
+# queue.qFront()
+queue.enqueue(4)
+queue.enqueue(7)
+queue.enqueue(7)
+queue.qPrint()
+# queue.dequeue()
+# queue.enqueue(2)
+# queue.enqueue(6)
+# queue.enqueue(9)
+# queue.dequeue()
+# queue.enqueue(8)
+# queue.qPrint()
