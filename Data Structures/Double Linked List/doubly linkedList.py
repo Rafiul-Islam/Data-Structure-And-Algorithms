@@ -38,7 +38,7 @@ class DoublyLinkedList:
     def print_list(self):
         cur = self.head
         while cur:
-            print(cur.data)
+            print(cur.data, end=" ")
             cur = cur.next
 
 
