@@ -1,8 +1,8 @@
 class Node:
     def __init__(self, data):
-        self.data = data
         self.left = None
         self.right = None
+        self.data = data
 
 
 def create_node(data):
@@ -45,18 +45,43 @@ def create_tree():
     return root
 
 
-def print_in_pre_order(root, li):
-    current_node = root
-    if current_node.left is not None:
-        li.append(current_node.left.data)
-        print_in_pre_order(current_node.left, li)
-    if current_node.right is not None:
-        li.append(current_node.right.data)
-        print_in_pre_order(current_node.right, li)
+def inorder(root):
+    if root:
+        # Traverse left
+        inorder(root.left)
+        # Traverse root
+        print(str(root.data) + "->", end='')
+        # Traverse right
+        inorder(root.right)
 
 
-if __name__ == '__main__':
-    tree_root = create_tree()
-    result_pre_order = [tree_root.data]
-    print_in_pre_order(tree_root, result_pre_order)
-    print("PrOrder: ", *result_pre_order)
+def postorder(root):
+    if root:
+        # Traverse left
+        postorder(root.left)
+        # Traverse right
+        postorder(root.right)
+        # Traverse root
+        print(str(root.data) + "->", end='')
+
+
+def preorder(root):
+    if root:
+        # Traverse root
+        print(str(root.data) + "->", end='')
+        # Traverse left
+        preorder(root.left)
+        # Traverse right
+        preorder(root.right)
+
+
+tree_root = create_tree()
+
+print("Inorder traversal ")
+inorder(tree_root)
+
+print("\nPreorder traversal ")
+preorder(tree_root)
+
+print("\nPostorder traversal ")
+postorder(tree_root)
