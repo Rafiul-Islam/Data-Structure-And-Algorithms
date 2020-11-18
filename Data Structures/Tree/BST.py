@@ -18,16 +18,6 @@ def insert(root, key):
     return root
 
 
-def search(root, key):
-    if root is None or root.val == key:
-        return root
-
-    if root.val < key:
-        return search(root.right, key)
-
-    return search(root.left, key)
-
-
 def inorder(root):
     if root:
         inorder(root.left)
