@@ -40,13 +40,13 @@ class BST:
             current_node = current_node.left
         return min_value
 
-    def delete_data(self, current_node, data):
+    def delete_data(self, data, current_node):
         if current_node is None:
             return current_node
         elif current_node.data > data:
-            current_node.left = self.delete_data(current_node.left, data)
+            current_node.left = self.delete_data(data, current_node.left)
         elif current_node.data < data:
-            current_node.right = self.delete_data(current_node.right, data)
+            current_node.right = self.delete_data(data, current_node.right)
         else:
             if current_node.left is None and current_node.right is None:
                 current_node = None
@@ -56,7 +56,7 @@ class BST:
                 current_node = current_node.left
             else:
                 current_node.data = self.find_min_value(current_node.right)
-                current_node.right = self.delete_data(current_node.right, current_node.data)
+                current_node.right = self.delete_data(current_node.data, current_node.right)
         return current_node
 
     def in_order_traversal(self, current_node):
@@ -84,5 +84,9 @@ print()
 # print('Exist' if bst.search_data(14, bst.root) else 'Not Exist')
 # print('Min Value:', bst.find_min_value(bst.root))
 
-bst.delete_data(bst.root, 10)
+bst.delete_data(10, bst.root)
+bst.in_order_traversal(bst.root)
+
+print()
+bst.delete_data(20, bst.root)
 bst.in_order_traversal(bst.root)
