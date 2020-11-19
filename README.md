@@ -1,7 +1,7 @@
 # Data Structures
 
-* [Double LinkedList](https://github.com/Rafiul-Islam/Data-Structure-And-Algorithms/tree/master/Data%20Structures/Double%20Linked%20List)
-* [LinkedList](https://github.com/Rafiul-Islam/Data-Structure-And-Algorithms/tree/master/Data%20Structures/Linked%20List)
+* [Doubly LinkedList](https://github.com/Rafiul-Islam/Data-Structure-And-Algorithms/tree/master/Data%20Structures/Double%20Linked%20List)
+* [Singly LinkedList](https://github.com/Rafiul-Islam/Data-Structure-And-Algorithms/tree/master/Data%20Structures/Linked%20List)
 * [Queue](https://github.com/Rafiul-Islam/Data-Structure-And-Algorithms/tree/master/Data%20Structures/Queue)
 * [Stack](https://github.com/Rafiul-Islam/Data-Structure-And-Algorithms/tree/master/Data%20Structures/Stack)
 * [Tree](https://github.com/Rafiul-Islam/Data-Structure-And-Algorithms/tree/master/Data%20Structures/Tree)
