@@ -10,7 +10,6 @@
 
 * [Binary Search](https://github.com/Rafiul-Islam/Data-Structure-And-Algorithms/blob/master/Algorithms/Searching/BinarySearch.py)
 * [Linear Search](https://github.com/Rafiul-Islam/Data-Structure-And-Algorithms/blob/master/Algorithms/Searching/LinearSearch.py)
-
 * [Bubble Sort](https://github.com/Rafiul-Islam/Data-Structure-And-Algorithms/blob/master/Algorithms/Sorting/BubbleSort.py)
 * [Insertion Sort](https://github.com/Rafiul-Islam/Data-Structure-And-Algorithms/blob/master/Algorithms/Sorting/InsertionSort.py)
 * [Merge Sort](https://github.com/Rafiul-Islam/Data-Structure-And-Algorithms/blob/master/Algorithms/Sorting/MergeSort.py)
