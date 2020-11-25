@@ -5,6 +5,7 @@
 * [Queue](https://github.com/Rafiul-Islam/Data-Structure-And-Algorithms/tree/master/Data%20Structures/Queue)
 * [Stack](https://github.com/Rafiul-Islam/Data-Structure-And-Algorithms/tree/master/Data%20Structures/Stack)
 * [Tree](https://github.com/Rafiul-Islam/Data-Structure-And-Algorithms/tree/master/Data%20Structures/Tree)
+* [HashTable](https://github.com/Rafiul-Islam/Data-Structure-And-Algorithms/tree/master/Data%20Structures/Hash%20Table)
 
 # Algorithms
 
