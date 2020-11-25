@@ -58,12 +58,15 @@ class Queue:
             self.prev = self.prev.next
 
     def d_q(self):
-        if self.next is None: return
+        if self.next is None:
+            return
         self.next = self.next.next
-        if self.next is None: self.prev = None
+        if self.next is None:
+            self.prev = None
 
     def queue_empty(self):
-        if self.next is None: return True
+        if self.next is None:
+            return True
         return False
 
     def q_first(self):
